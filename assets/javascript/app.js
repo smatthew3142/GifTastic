@@ -64,7 +64,7 @@ function displayMovieInfo() {
 
             var movieGif = $("<img class='animateGif'>");
 
-            movieGif.attr("src", results[i].images.fixed_height.url);
+            movieGif.attr("src", results[i].images.fixed_height_still.url);
 
             gifDiv.prepend(p);
             gifDiv.prepend(movieGif);
