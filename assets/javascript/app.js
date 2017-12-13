@@ -1,5 +1,5 @@
 $(document).ready(function(){
-var movies = ["Aladdin","Chicken Run","The Emperor's New Groove","Horton Hears a Who","Moana","Lion King","Lilo and Stitch","Pocahontas","The Prince of Egypt","The Road to El Dorado","Tangled"];
+var movies = ["Aladdin","Chicken Run","The Emperor's New Groove","Horton Hears a Who","Moana","Kung Fu Panda","Lion King","Lilo and Stitch","Pocahontas","The Prince of Egypt","The Road to El Dorado","Sinbad: Legend of the Seven Seas","Tangled"];
 
 
 //create set buttons
@@ -62,16 +62,33 @@ function displayMovieInfo() {
 
             var p = $("<p>").text("Rating: " + rating);
 
-            var movieGif = $("<img>");
+            var movieGif = $("<img class='animateGif'>");
 
             movieGif.attr("src", results[i].images.fixed_height.url);
 
-            
-
-            gifDiv.append(p);
-            gifDiv.append(movieGif);
+            gifDiv.prepend(p);
+            gifDiv.prepend(movieGif);
 
             $("#viewGifs").prepend(gifDiv);
+
+            // $(".animateGif").on("click", function() {
+            //   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+            //   var state = $(this).attr("data-state");
+
+            //   console.log(state);
+            //   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+            //   // Then, set the image's data-state to animate
+            //   // Else set src to the data-still value
+            //   if (state === "still") {
+            //     $(this).attr("src", $(this).attr("data-animate"));
+            //     $(this).attr("data-state", "animate");
+            //   } else {
+            //     $(this).attr("src", $(this).attr("data-still"));
+            //     $(this).attr("data-state", "still");
+            //   }
+            // });
+
+            
           }
         });
 
