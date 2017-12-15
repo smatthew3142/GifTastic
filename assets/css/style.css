@@ -41,15 +41,13 @@ input {
 }
 
 img{
-  max-height: 150px;
+  max-height: 250px;
 }
 
 .gif {
-  align-content: center;
-  display: block;
-  float:left;
+ 
+  float: left;
   margin: 25px;
-  
 }
 
 form {
