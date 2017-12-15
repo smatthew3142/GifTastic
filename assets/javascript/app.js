@@ -43,7 +43,7 @@ function displayMovieInfo() {
 
         var movie = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q="  + movie + "&api_key=lCGJ1dPwqYzSX3wsicXsZGf2OGLVYa8K&limit=9";
-
+        console.log(movie);
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -71,6 +71,8 @@ function displayMovieInfo() {
             gifDiv.prepend(movieGif);
             $("#viewGifs").prepend(gifDiv);
 
+          }
+
             $(".animateGif").on("click", function() {
               
               var state = $(this).attr("data-state");
@@ -89,8 +91,7 @@ function displayMovieInfo() {
               }
 
             }); 
-          }
-        });
+          });
       }
   
       $(document).on("click", ".movie", displayMovieInfo);
